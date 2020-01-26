@@ -1,0 +1,57 @@
+
+# Quarkus Projects
+
+Quarkus, the Supersonic Subatomic Java Framework.
+
+If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+
+## Running the application in dev mode
+
+You can run your application in dev mode that enables live coding using:
+```
+./mvnw quarkus:dev
+```
+
+## Packaging and running applications
+
+The application is packageable using `./mvnw package`.
+It produces the executable `quarkus-hello-pod-1.0.0-SNAPSHOT-runner.jar` file in `/target` directory.
+Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/lib` directory.
+
+The application is now runnable using `java -jar target/quarkus-hello-pod-1.0.0-SNAPSHOT-runner.jar`.
+
+## Creating a native executable
+
+You can create a native executable using: `./mvnw package -Pnative`.
+
+Or you can use Docker to build the native executable using: `./mvnw package -Pnative -Dquarkus.native.container-build=true`.
+
+You can then execute your binary: `./target/quarkus-hello-pod-1.0.0-SNAPSHOT-runner`
+
+If you want to learn more about building native executables, please consult https://quarkus.io/guides/building-native-image-guide .
+
+## Ref Links
+
+<https://github.com/apache/camel-quarkus/tree/master/integration-tests />
+<https://codefresh.io/docker-tutorial/java_docker_pipeline />
+<https://github.com/PacktPublishing/Hands-On-Cloud-Native-Applications-with-Java-and-Quarkus />
+
+## Quarkus Commands
+```
+netstat -an | grep 5005
+```
+```
+-Dquarkus.http.test-port=9091
+```
+```
+ps -o pid,rss,command -p $(pgrep -f chapter02)
+```
+
+## Maven Commands
+
+<code>./mvnw -Dplugin=io.quarkus:quarkus-maven-plugin help:describe</code>
+
+<code>./mvnw compile quarkus:dev</code>
+
+<code>./mvnw clean -DskipTests package -Pnative</code>
+
