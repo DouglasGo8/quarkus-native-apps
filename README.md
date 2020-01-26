@@ -68,7 +68,7 @@ docker ps --format '{{.Image}}'
 
 <code>./mvnw clean -DskipTests package -Pnative</code>
 
-<code>mvn clean -DskipTests package -Pnative -Dnative-image.docker-build</code>
+<code>./mvnw package -Pnative -Dquarkus.native.container-build=true</code>
 
 ## OCI - Universal Base Images (UBI)
 ```
@@ -77,13 +77,15 @@ runtime languages and other packages that are freely redistributable.
 ```
 ## Openshift Binary Build Commands
 ```
+minishift oc-env 
 oc new-build --binary --name=quarkus-hello-app -l app=quarkus-hello-app
-mvn clean -DskipTests package -Pnative -Dnative-image.docker-build
+mvn clean -DskipTests package -Pnative -Dquarkus.native.container-build=true
 oc start-build quarkus-hello-app --from-dir=. --follow
 oc new-app quarkus-hello-app -l app=quarkus-hello-app
 oc expose service quarkus-hello-app
+oc scale --replicas=10 dc/quarkus-hello-app
 --- Only updates ---
-mvn clean -DskipTests package -Pnative -Dnative-image.docker-build
+mvn clean -DskipTests package -Pnative -Dquarkus.native.container-build=true
 oc start-build quarkus-hello-app --from-dir=. --follow
 ```
 
