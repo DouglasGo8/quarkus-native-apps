@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.packtpub.native.apps.quarkus</groupId>
-    <artifactId>quarkus-native-apps</artifactId>
 
+    <artifactId>quarkus-native-apps</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <packaging>pom</packaging>
@@ -16,17 +17,21 @@
         <maven.compiler.parameters>true</maven.compiler.parameters>
 
         <!-- JDK 1.8 -->
+
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
         <!-- Quarkus -->
+
         <quarkus-plugin.version>1.1.1.Final</quarkus-plugin.version>
         <quarkus.platform.artifact-id>quarkus-universe-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
         <quarkus.platform.version>1.1.1.Final</quarkus.platform.version>
+
         <!--- Surefire -->
+
         <surefire-plugin.version>2.22.1</surefire-plugin.version>
 
     </properties>
@@ -80,10 +85,12 @@
                     </execution>
                 </executions>
             </plugin>
+
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${compiler-plugin.version}</version>
             </plugin>
+
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${surefire-plugin.version}</version>
@@ -94,7 +101,9 @@
                 </configuration>
             </plugin>
         </plugins>
+
     </build>
+
     <profiles>
         <profile>
             <id>native</id>
@@ -135,6 +144,7 @@
     <modules>
         <module>chapter02</module>
         <module>quarkus-hello</module>
+        <module>chapter03</module>
     </modules>
 
 </project>

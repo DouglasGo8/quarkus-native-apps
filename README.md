@@ -46,6 +46,19 @@ netstat -an | grep 5005
 ```
 ps -o pid,rss,command -p $(pgrep -f chapter02)
 ```
+```
+docker build -f src/main/docker/Dockerfile.jvm -t quarkus/chapter03-okd .
+```
+```
+docker build -f src/main/docker/Dockerfile.native -t quarkus/chapter03-okd-native .
+```
+```
+docker run -i --name app --rm -p 8080:8080 quarkus/chapter03-okd
+docker run -i --name app --rm -p 8080:8080 quarkus/chapter03-okd-native
+```
+```
+docker ps --format '{{.Image}}'
+```
 
 ## Maven Commands
 
@@ -54,4 +67,23 @@ ps -o pid,rss,command -p $(pgrep -f chapter02)
 <code>./mvnw compile quarkus:dev</code>
 
 <code>./mvnw clean -DskipTests package -Pnative</code>
+
+<code>mvn clean -DskipTests package -Pnative -Dnative-image.docker-build</code>
+
+## OCI - Universal Base Images (UBI)
+```
+Red Hat Universal Base Images (UBI) are OCI-compliant container OS images that include complimentary
+runtime languages and other packages that are freely redistributable.
+```
+## Openshift Binary Build Commands
+```
+oc new-build --binary --name=quarkus-hello-app -l app=quarkus-hello-app
+mvn clean -DskipTests package -Pnative -Dnative-image.docker-build
+oc start-build quarkus-hello-app --from-dir=. --follow
+oc new-app quarkus-hello-app -l app=quarkus-hello-app
+oc expose service quarkus-hello-app
+--- Only updates ---
+mvn clean -DskipTests package -Pnative -Dnative-image.docker-build
+oc start-build quarkus-hello-app --from-dir=. --follow
+```
 
