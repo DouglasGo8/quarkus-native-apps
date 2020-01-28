@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.packtpub.native.apps.quarkus</groupId>
+    <groupId>com.packtpub.apps.quarkus</groupId>
 
     <artifactId>quarkus-native-apps</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -143,8 +143,9 @@
 
     <modules>
         <module>chapter02</module>
-        <module>quarkus-hello</module>
         <module>chapter03</module>
+        <module>chapter04</module>
+        <module>quarkus-hello</module>
     </modules>
 
 </project>
