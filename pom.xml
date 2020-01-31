@@ -145,6 +145,8 @@
         <module>chapter02</module>
         <module>chapter03</module>
         <module>chapter04</module>
+        <module>chapter05-hibernate-orm</module>
+        <module>chapter05-hibernate-panache</module>
         <module>quarkus-hello</module>
     </modules>
 

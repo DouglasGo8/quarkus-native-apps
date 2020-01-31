@@ -1,3 +1,5 @@
+## Generate Projects
+mvn archetype:generate -DgroupId=com.packtpub.apps.quarkus -DartifactId=chapter
 
 # Quarkus Projects
 
