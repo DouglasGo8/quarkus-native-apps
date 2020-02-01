@@ -64,6 +64,10 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-resteasy-jsonb</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.10</version>
@@ -147,6 +151,9 @@
         <module>chapter04</module>
         <module>chapter05-hibernate-orm</module>
         <module>chapter05-hibernate-panache</module>
+        <module>chapter06-health-check</module>
+        <module>chapter06-fault-tolerance</module>
+        <module>chapter06-metrics</module>
         <module>quarkus-hello</module>
     </modules>
 

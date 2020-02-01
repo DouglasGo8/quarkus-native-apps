@@ -17,11 +17,5 @@
 
     <name>Hands On :: Quarkus :: Chapter 04</name>
 
-    <dependencies>
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-resteasy-jsonb</artifactId>
-        </dependency>
-    </dependencies>
 
 </project>

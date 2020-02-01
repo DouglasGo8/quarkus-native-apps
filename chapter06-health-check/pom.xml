@@ -3,7 +3,6 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-
     <parent>
         <artifactId>quarkus-native-apps</artifactId>
         <groupId>com.packtpub.apps.quarkus</groupId>
@@ -11,20 +10,18 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.packtpub.quarkus.chapter05.hibernate.panache</groupId>
-    <artifactId>chapter05-hibernate-panache</artifactId>
+    <groupId>com.packtpub.quarkus.chapter06.health.check</groupId>
+    <artifactId>chapter06-health-check</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-
-    <name>Hands On :: Quarkus :: Chapter 05 :: Hibernate Panache</name>
 
     <dependencies>
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-hibernate-orm</artifactId>
+            <artifactId>quarkus-resteasy-jsonb</artifactId>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-hibernate-orm-panache</artifactId>
+            <artifactId>quarkus-hibernate-orm</artifactId>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
@@ -32,7 +29,12 @@
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-smallrye-health</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
             <artifactId>quarkus-jdbc-postgresql</artifactId>
         </dependency>
     </dependencies>
+
 </project>
