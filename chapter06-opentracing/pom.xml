@@ -1,7 +1,7 @@
-<?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
 
     <parent>
         <artifactId>quarkus-native-apps</artifactId>
@@ -10,19 +10,17 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.packtpub.quarkus.chapter06.fault.tolerance</groupId>
-    <artifactId>chapter06-fault-tolerance</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-    <name>Hands On :: Quarkus :: Chapter 06 :: Fault Tolerance</name>
+    <groupId>com.packtpub.apps.quarkus.opentracing</groupId>
+    <artifactId>chapter06-opentracing</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+    <name>Hands On :: Quarkus :: Chapter 06 :: Open Tracing</name>
 
     <dependencies>
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-hibernate-orm</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-smallrye-fault-tolerance</artifactId>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
@@ -32,6 +30,11 @@
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-jdbc-postgresql</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-smallrye-opentracing</artifactId>
+        </dependency>
     </dependencies>
+
 
 </project>

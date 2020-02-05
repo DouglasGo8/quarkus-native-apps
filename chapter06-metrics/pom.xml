@@ -13,6 +13,7 @@
     <groupId>com.packtpub.quarkus.chapter06.metrics</groupId>
     <artifactId>chapter06-metrics</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <name>Hands On :: Quarkus :: Chapter 06 :: Metrics</name>
 
     <dependencies>
         <dependency>
