@@ -66,6 +66,10 @@ docker ps --format '{{.Image}}'
 ```
 docker run -d --name jaeger -e COLLECTOR_ZIPKIN_HTTP_PORT=9411 -p 5775:5775/udp -p 6831:6831/udp -p 6832:6832/udp -p 5778:5778 -p 16686:16686 -p 14268:14268 -p 9411:9411 jaegertracing/all-in-one
 ```
+## Setting Up Keycloak
+```
+docker run --rm --name keycloak -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin -p 8180:8180 -it quay.io/keycloak/keycloak:7.0.1 -b 0.0.0.0 -Djboss.http.port=8180 -Dkeycloak.profile.feature.upload_scripts=enabled
+```
 
 ## Maven Commands
 
