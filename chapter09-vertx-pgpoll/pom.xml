@@ -10,30 +10,22 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.packtpub.apps.quarkus.elytron</groupId>
-    <artifactId>chapter07-elytron</artifactId>
+    <groupId>com.packtpub.apps.quarkus.vertx.pgpool</groupId>
+    <artifactId>chapter09-vertx-pgpoll</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>Hands On :: Quarkus :: Chapter 07 :: Elytron</name>
-
+    <name>Hands On :: Quarkus :: Chapter 09 :: Vert.x PgPool</name>
 
     <dependencies>
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-hibernate-orm</artifactId>
+            <artifactId>quarkus-vertx</artifactId>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-agroal</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-jdbc-postgresql</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-elytron-security-jdbc</artifactId>
+            <artifactId>quarkus-reactive-pg-client</artifactId>
         </dependency>
     </dependencies>
+
 
 </project>

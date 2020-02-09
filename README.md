@@ -100,3 +100,29 @@ mvn clean -DskipTests package -Pnative -Dquarkus.native.container-build=true
 oc start-build quarkus-hello-app --from-dir=. --follow
 ```
 
+## Imperative style Code
+```text
+Statement by statement
+URL url = new URL('http://acme.com');
+BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream());
+...
+```
+## Reactive style Code
+```text
+Processes incoming events over the event loop
+
+1. Responsive
+2. Resilient
+3. Elastic
+4. Message-driven
+-- Callback concept --
+the running thread is released while connection with
+the HTTP server is being established, then when the
+response comes, we can reached it sooner
+```
+
+```
+vertx.createHttpClient().getNow(80, "acme.com", "", response -> {
+    response.bodyHandler(out::println);
+});
+```
