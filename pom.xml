@@ -3,11 +3,13 @@
         xmlns="http://maven.apache.org/POM/4.0.0"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>com.packtpub.apps.quarkus</groupId>
   <artifactId>quarkus-native-apps</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>HandsOn :: Cloud Native :: Quarkus</name>
+
   <properties>
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
     <maven.compiler.parameters>true</maven.compiler.parameters>
@@ -24,6 +26,7 @@
     <!--- Surefire -->
     <surefire-plugin.version>2.22.1</surefire-plugin.version>
   </properties>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -61,6 +64,7 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
+
   <build>
     <plugins>
       <plugin>
@@ -126,6 +130,7 @@
       </properties>
     </profile>
   </profiles>
+
   <modules>
     <module>chapter02</module>
     <module>chapter03</module>
@@ -145,6 +150,8 @@
     <module>chapter09-vertx-axle</module>
     <module>chapter09-vertx-pgpoll</module>
     <module>chapter10-kafka</module>
+    <module>chapter10-broker-amqp</module>
     <module>quarkus-hello</module>
   </modules>
+
 </project>
