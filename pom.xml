@@ -2,6 +2,7 @@
 <project
         xmlns="http://maven.apache.org/POM/4.0.0"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.packtpub.apps.quarkus</groupId>
@@ -11,6 +12,10 @@
   <name>HandsOn :: Cloud Native :: Quarkus</name>
 
   <properties>
+    <!-- Misc -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
     <maven.compiler.parameters>true</maven.compiler.parameters>
     <!-- JDK 1.8 -->
@@ -125,16 +130,19 @@
           </plugin>
         </plugins>
       </build>
+
       <properties>
         <quarkus.package.type>native</quarkus.package.type>
       </properties>
+
     </profile>
+
   </profiles>
 
   <modules>
-    <module>chapter02</module>
-    <module>chapter03</module>
-    <module>chapter04</module>
+    <module>chapter02-first-quarkus-app</module>
+    <module>chapter03-containerized-app</module>
+    <module>chapter04-web-interfaces</module>
     <module>chapter05-hibernate-orm</module>
     <module>chapter05-hibernate-panache</module>
     <module>chapter06-health-check</module>
@@ -152,6 +160,7 @@
     <module>chapter10-kafka</module>
     <module>chapter10-broker-amqp</module>
     <module>quarkus-hello</module>
+    <module>quarkus-vertx-env-on-paas</module>
   </modules>
 
 </project>
