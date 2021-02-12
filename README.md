@@ -9,6 +9,13 @@ If you want to learn more about Quarkus, please visit its website: https://quark
 
 ## Running the application in dev mode
 
+* Over Ubuntu must install
+
+```
+sudo apt-get install build-essential
+sudo sudo apt-get install zlib1g-dev
+```
+
 You can run your application in dev mode that enables live coding using:
 ```
 ./mvnw quarkus:dev
